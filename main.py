@@ -47,6 +47,27 @@ st.set_page_config(**PAGE_CONFIG)
 # Aplicar estilos CSS
 st.markdown(DASHBOARD_CSS, unsafe_allow_html=True)
 
+# CSS adicional para mejorar contraste en sidebar
+st.markdown("""
+<style>
+    /* Mejorar contraste en sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #ffffff;
+    }
+    [data-testid="stSidebar"] h3 {
+        color: #2c3e50 !important;
+        font-weight: 600 !important;
+    }
+    [data-testid="stSidebar"] label {
+        color: #2c3e50 !important;
+        font-weight: 500 !important;
+    }
+    [data-testid="stSidebar"] p {
+        color: #2c3e50 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 
 # ============================================
 # HEADER
