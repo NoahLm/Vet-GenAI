@@ -67,7 +67,7 @@ def renderizar_pagina_completa(df):
     """
     inicializar_session_state()
 
-    st.markdown('<div class="seccion-titulo">🤖 MoniAI - Asistente Epidemiológico</div>', unsafe_allow_html=True)
+    st.markdown('<div class="seccion-titulo">🤖 VetAI - Asistente Epidemiológico</div>', unsafe_allow_html=True)
     st.markdown('<p style="color: #6c757d; font-size: 13px; margin-top: -5px;">Análisis profundo con búsqueda web y contexto global del gusano barrenador</p>', unsafe_allow_html=True)
 
     # Inicializar agente
@@ -177,7 +177,7 @@ def renderizar_pagina_completa(df):
                 <div style="background: #e8f4f8; padding: 20px 20px 10px 20px; border-radius: 10px;
                             margin-bottom: 25px; max-width: 85%; border-left: 4px solid #7D1F3A;">
                     <div style="font-size: 11px; color: #666; margin-bottom: 10px;">
-                        🤖 MoniAI
+                        🤖 VetAI
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -193,7 +193,7 @@ def renderizar_pagina_completa(df):
     else:
         st.markdown("""
         <div style="text-align: center; padding: 80px 40px; color: #999;">
-            <h2 style="color: #7D1F3A; margin-bottom: 15px;">👋 ¡Hola! Soy MoniAI</h2>
+            <h2 style="color: #7D1F3A; margin-bottom: 15px;">👋 ¡Hola! Soy VetAI</h2>
             <p style="font-size: 16px; color: #666; max-width: 600px; margin: 0 auto;">
                 Tu asistente especializado en análisis epidemiológico del gusano barrenador.<br>
                 Puedo analizar los datos de Yucatán y buscar información global sobre
@@ -225,7 +225,7 @@ def renderizar_pagina_completa(df):
 
         if pregunta_a_enviar:
             # Mostrar status mientras procesa
-            with st.status("🤖 MoniAI está analizando...", expanded=True) as status:
+            with st.status("🤖 VetAI está analizando...", expanded=True) as status:
                 if usar_web:
                     st.write("🌐 Buscando información en internet...")
                 st.write("📊 Analizando datos de Yucatán...")
@@ -237,7 +237,7 @@ def renderizar_pagina_completa(df):
                     usar_busqueda_web=usar_web
                 )
 
-                status.update(label="✅ MoniAI completó el análisis!", state="complete", expanded=False)
+                status.update(label="✅ VetAI completó el análisis!", state="complete", expanded=False)
 
             st.session_state.chat_history_full.append({
                 "pregunta": pregunta_a_enviar,
