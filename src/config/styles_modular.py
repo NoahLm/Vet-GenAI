@@ -8,7 +8,14 @@ DASHBOARD_CSS = """
     /* ==================== FUENTE BASE ==================== */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 
-    * {
+    /* Aplicar fuente solo a elementos específicos de Streamlit, NO usar selector universal */
+    .stApp,
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
+    .stApp p, .stApp span, .stApp div,
+    .stButton button,
+    [data-testid="stSidebar"],
+    [data-testid="stMetricLabel"],
+    [data-testid="stMetricValue"] {
         font-family: 'Montserrat', sans-serif;
     }
 
@@ -20,6 +27,16 @@ DASHBOARD_CSS = """
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
+
+    /* Ocultar badges y elementos de Streamlit que no queremos */
+    [data-testid="stStatusWidget"] div[data-testid="stMarkdownContainer"] {
+        display: none !important;
+    }
+
+    /* Ocultar el texto "streamlitApp" que aparece arriba */
+    iframe[title="streamlitApp"] {
+        display: none !important;
+    }
 
     /* ==================== HEADER GUBERNAMENTAL ==================== */
     /* Solo afecta al div con clase gobierno-header */
@@ -299,6 +316,29 @@ DASHBOARD_CSS = """
     /* ==================== STATUS Y SPINNERS ==================== */
     /* Textos dentro de status/spinner - NEGRO */
     [data-testid="stStatusWidget"] p {
+        color: #000000 !important;
+    }
+
+    /* ==================== CONTENIDO DE ANÁLISIS Y MARKDOWN ==================== */
+    /* Asegurar que todo el markdown tenga colores correctos */
+
+    /* Markdown en main area - NEGRO por defecto */
+    .main div[data-testid="stMarkdownContainer"] p,
+    .main div[data-testid="stMarkdownContainer"] li,
+    .main div[data-testid="stMarkdownContainer"] span {
+        color: #000000 !important;
+    }
+
+    /* Títulos en markdown - GUINDA */
+    .main div[data-testid="stMarkdownContainer"] h1,
+    .main div[data-testid="stMarkdownContainer"] h2,
+    .main div[data-testid="stMarkdownContainer"] h3,
+    .main div[data-testid="stMarkdownContainer"] h4 {
+        color: #7D1F3A !important;
+    }
+
+    /* Texto en info/success/warning boxes - NEGRO */
+    .stAlert p {
         color: #000000 !important;
     }
 </style>
