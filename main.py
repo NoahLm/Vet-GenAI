@@ -9,7 +9,7 @@ from datetime import datetime
 
 # Importar configuración
 from src.config.settings import PAGE_CONFIG, TOTAL_MUNICIPIOS_YUCATAN
-from src.config.styles import DASHBOARD_CSS
+from src.config.styles_modular import DASHBOARD_CSS
 
 # Importar funciones de datos
 from src.data.google_sheets import cargar_datos_desde_sheets, aplicar_filtros
