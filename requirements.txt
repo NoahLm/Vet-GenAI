@@ -1,0 +1,21 @@
+# Dependencias del Dashboard de Gusano Barrenador
+# Instalar con: pip install -r requirements.txt
+
+# Core
+streamlit>=1.31.0
+pandas>=2.2.0
+plotly>=5.18.0
+numpy>=1.26.3
+
+# Google Sheets
+gspread>=5.12.4
+google-auth>=2.27.0
+
+# AI - Claude (Anthropic)
+anthropic>=0.40.0
+langchain>=0.3.0
+langchain-anthropic>=0.3.0
+langchain-core>=0.3.0
+
+# Utils
+pydantic>=2.0.0

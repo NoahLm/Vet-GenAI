@@ -1,0 +1,45 @@
+# Entorno virtual
+venv/
+env/
+ENV/
+.venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Credenciales y secretos (¡MUY IMPORTANTE!)
+.streamlit/secrets.toml
+credentials.json
+*.json
+!requirements.json
+others/
+
+# Datos locales
+*.csv
+*.xlsx
+*.xls
+
+# Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Caché de Streamlit
+.streamlit/
