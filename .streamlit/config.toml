@@ -1,0 +1,15 @@
+# Configuración de Streamlit
+
+[theme]
+base = "light"  # Forzar tema claro
+primaryColor = "#7D1F3A"  # Guinda para botones y elementos interactivos
+backgroundColor = "#FFFFFF"  # Blanco puro para fondo
+secondaryBackgroundColor = "#F8F9FA"  # Gris muy claro para tarjetas
+textColor = "#000000"  # NEGRO PURO para todo el texto
+font = "sans serif"
+
+[server]
+headless = true
+port = 8501
+# enableCORS y enableXsrfProtection se dejan en sus valores por defecto
+# para evitar conflictos de seguridad

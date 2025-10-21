@@ -13,6 +13,7 @@ __pycache__/
 
 # Credenciales y secretos (¡MUY IMPORTANTE!)
 .streamlit/secrets.toml
+.streamlit/secrets.toml.example
 credentials.json
 *.json
 !requirements.json
@@ -41,5 +42,5 @@ Thumbs.db
 # Logs
 *.log
 
-# Caché de Streamlit
-.streamlit/
+# Caché de Streamlit - permitir config.toml pero NO secrets
+# (ya excluido arriba: .streamlit/secrets.toml)
