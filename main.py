@@ -9,7 +9,7 @@ from datetime import datetime
 
 # Importar configuración
 from src.config.settings import PAGE_CONFIG, TOTAL_MUNICIPIOS_YUCATAN
-from src.config.styles_modular import DASHBOARD_CSS
+from src.config.styles_minimal import DASHBOARD_CSS
 
 # Importar funciones de datos
 from src.data.google_sheets import cargar_datos_desde_sheets, aplicar_filtros
@@ -44,29 +44,8 @@ from src.components.chatbot_ui import renderizar_chatbot_tab
 # ============================================
 st.set_page_config(**PAGE_CONFIG)
 
-# Aplicar estilos CSS
+# Aplicar estilos CSS custom (header, paneles, chatbot)
 st.markdown(DASHBOARD_CSS, unsafe_allow_html=True)
-
-# CSS adicional para mejorar contraste en sidebar
-st.markdown("""
-<style>
-    /* Mejorar contraste en sidebar */
-    [data-testid="stSidebar"] {
-        background-color: #ffffff;
-    }
-    [data-testid="stSidebar"] h3 {
-        color: #2c3e50 !important;
-        font-weight: 600 !important;
-    }
-    [data-testid="stSidebar"] label {
-        color: #2c3e50 !important;
-        font-weight: 500 !important;
-    }
-    [data-testid="stSidebar"] p {
-        color: #2c3e50 !important;
-    }
-</style>
-""", unsafe_allow_html=True)
 
 
 # ============================================
