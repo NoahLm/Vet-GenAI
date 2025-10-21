@@ -8,9 +8,23 @@ DASHBOARD_CSS = """
     /* Importar fuente Montserrat */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 
-    /* Aplicar fuente SOLO al contenedor principal */
+    /* Forzar tema claro con fondo blanco */
     .stApp {
         font-family: 'Montserrat', sans-serif;
+        background-color: #FFFFFF !important;
+    }
+
+    .main {
+        background-color: #FFFFFF !important;
+    }
+
+    [data-testid="stSidebar"] {
+        background-color: #FFFFFF !important;
+    }
+
+    /* Asegurar que todo el contenido tenga fondo blanco */
+    [data-testid="stAppViewContainer"] {
+        background-color: #FFFFFF !important;
     }
 
     /* Ocultar elementos de Streamlit que no queremos */
